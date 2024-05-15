@@ -21,7 +21,8 @@ public class BankAccount {
 
     }
 
-    //behaviours aka methods (getters and setters)
+    //behaviours aka methods
+    // (the getters and setters)
     public String getFirstName() {
         return this.firstName;
     }
@@ -58,7 +59,7 @@ public class BankAccount {
     }
 
     public void setBalance(Double balance){
-        this.balance = 0.00;
+        this.balance = 100.00;
     }
 
     public void deposit(double amount) {
@@ -73,13 +74,12 @@ public class BankAccount {
     public void withdraw(double amount) {
         if (amount > 0.00 && amount <= balance) {
             balance -= amount;
-            System.out.println("Withdrawl of £" + amount + " made. ");
+            System.out.println("Withdrawal of £" + amount + " made. ");
         } else {
             System.out.println(" Try again by entering an amount over £0.00 ");
         }
 
     }
-
 
     public void addInterest() {
         double interestRate = 4.0; //4% automatically for any amount
